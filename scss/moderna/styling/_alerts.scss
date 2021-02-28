@@ -12,5 +12,13 @@
                 @include alert-icon-color($color);
             }
         }
+
+        &-dim-#{$color} {
+            @include alert-dimmed-color($color, theme-color-level($color, $alert-border-level), theme-color-level($color, $alert-color-level));
+
+            .alert-icon {
+                @include alert-icon-dim-color($color);
+            }
+        }
     }
 }

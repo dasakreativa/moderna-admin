@@ -1,0 +1,57 @@
+.btn {
+
+    @each $color,
+    $value in $theme-colors {
+        @if $color=='success'or $color=='warning' {
+
+            &-#{$color},
+            &-#{$color}:focus,
+            &-#{$color}:active,
+            &-#{$color}.active,
+            &-#{$color}:hover,
+            &-outline-#{$color}:focus,
+            &-outline-#{$color}:active,
+            &-outline-#{$color}.active,
+            &-outline-#{$color}:hover {
+                color: $white;
+            }
+        }
+
+        &-dim.btn-#{$color} {
+            @if $color=='light' {
+                color: $dark;
+            } @else {
+                color: $value;
+            }
+
+            border-color: transparent;
+            background: rgba(map-get($theme-colors, $color), .1);
+
+            @include hover() {
+                @if $color=='light' {
+                    color: $dark;
+                } @else {
+                    color: $white;
+                }
+                background-color: $value;
+                border-color: $value;
+            }
+        }
+
+        &-dim-alt.btn-#{$color} {
+            color: $white;
+            border-color: transparent;
+            background: rgba($white, .1);
+
+            @include hover() {
+                @if $color=='light' {
+                    color: $dark;
+                } @else {
+                    color: $white;
+                }
+                background-color: $value;
+                border-color: $value;
+            }
+        }
+    }
+}
