@@ -1,0 +1,28 @@
+// Core
+
+// Styling
+@import "styling/forms";
+@import "styling/alerts";
+
+body {
+    font-family: 'Rubik', 'Segoe UI', Arial, Helvetica, sans-serif;
+    background: $gray-100;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+
+    &-track {
+        background: $gray-500;
+    }
+    
+    &-thumb {
+        background-color: $gray-700;
+        border-radius: 20px;
+        border: 3px solid $gray-500;
+
+        &:hover {
+            background-color: $gray-800;
+        }
+    }
+}

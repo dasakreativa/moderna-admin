@@ -1,0 +1,16 @@
+@import "../mixins/alerts";
+
+.alert {
+    overflow: hidden;
+
+    @each $color,
+    $value in $theme-colors {
+        &-#{$color} {
+            @include alert-variant-custom($color, theme-color-level($color, $alert-border-level), theme-color-level($color, $alert-color-level));
+
+            .alert-icon {
+                @include alert-icon-color($color);
+            }
+        }
+    }
+}
