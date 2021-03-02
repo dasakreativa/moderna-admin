@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title And Meta -->
+    <title>Kesalahan &mdash; Moderna Admin</title>
+    <link rel="shortcut icon" href="img/brands/svg/icon-color.svg" type="image/svg" />
+
+    <!-- Core -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <!-- Addons -->
+    <link rel="stylesheet" href="addons/fontawesome-free/css/all.min.css" />
+</head>
+
+<body>
+
+    <main class="row min-vh-100 no-gutters">
+        <div class="col-md-4 bg-dark d-flex align-items-center">
+            <img src="img/error-405-method-not-allowed.svg" class="w-100 text-center" />
+        </div>
+        <div class="col-md-8 d-flex flex-column justify-content-between">
+            <div class="p-4">
+                <h1>Kesalahan</h1>
+                <h3 class="text-muted">Kesalahan 405 &mdash; Metode Akses Tidak Diperbolehkan</h3>
+                <p>Ups, maaf! Halaman yang anda akses saat ini tidak memperbolehkan anda menggunakan method {$nama_method}.</p>
+                <hr>
+                <div class="d-md-flex">
+                    <button class="btn btn-primary mb-md-0 mb-3 mr-2" onclick="javascript:history.back();"><i class="fas fa-arrow-left mr-2"></i>Kembali ke Halaman Sebelumnya</button>
+                    <a href="index.html" class="btn btn-outline-primary mb-md-0 mb-3 mr-2"><i class="fas fa-home mr-2"></i>Kembali Ke Rumah</a>
+                </div>
+            </div>
+            <footer class="p-4 d-flex align-items-end">
+                <img src="img/brands/png/logo-colorxxxhdpi.png" width="200px" /><div class="border-left ml-3 px-3">Hak Cipta 2020 &mdash; <a href="index.html">Moderna Admin</a></div>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Core -->
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core -->
+    <script src="js/moderna-admin/all.js"></script>
+</body>
+
+</html>

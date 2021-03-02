@@ -74,6 +74,12 @@ $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
+// For Admin Variable
+$login-wrapper-width-lg:    30rem;
+$login-wrapper-width-sm:    22rem;
+$sidebar-wrapper-width-lg:  35rem;
+$sidebar-wrapper-width-sm:  15rem;
+
 $theme-colors: () !default;
 $theme-colors: map-merge(
   (

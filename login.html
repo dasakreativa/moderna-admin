@@ -1,24 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Title And Meta -->
-    <title>Dashboard &mdash; Moderna Admin</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Masuk &mdash; Moderna Admin</title>
+    <link rel="shortcut icon" href="img/brands/svg/icon-color.svg" type="image/svg" />
 
     <!-- Core -->
     <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <!-- Addons -->
+    <link rel="stylesheet" href="addons/fontawesome-free/css/all.min.css" />
 </head>
+
 <body>
-    
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <main id="wrapper-login">
+        <div class="left">
+            <div class="top">
+                <div class="logo">
+                    <img src="img/brands/svg/icon-circle-color.svg" class="logo" alt="Moderna Admin" />
+                </div>
+                <div class="mt-3">
+                    <h3>Masuk Dahulu</h3>
+                    <p class="mb-0 text-muted">Silahkan masuk dengan kredensial anda.</p>
+                </div>
+
+                <form action="#" method="post" class="my-4">
+
+                    <div class="form-group">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="username" placeholder="Isikan dengan nama pengguna anda minimal 5 karakter." />
+                            <label for="username" class="label">Nama Pengguna<span class="text-danger ml-1">*</span></label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="password" placeholder="Isikan dengan kata sandi anda minimal 5 karakter." />
+                                <label for="password" class="label">Kata Sandi<span class="text-danger ml-1">*</span></label>
+                            </div>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="rememberMe" />
+                        <label class="custom-control-label" for="rememberMe">Ingatkan saya di sesi ini</label>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-dim btn-primary" type="submit"><i class="fas fa-sign-in-alt mr-2"></i>Masuk</button>
+                        <a href="#">Lupa Kata Sandi?</a>
+                    </div>
+
+                </form>
+            </div>
+            <div class="footer"> 
+                <div class="separator">Atau Masuk Dengan</div>
+                <a href="#" class="btn btn-block btn-twitter btn-social">
+                    <span class="fab fa-fw fa-twitter"></span> Sign in with Twitter
+                </a>
+                <a href="#" class="btn btn-block btn-google btn-social">
+                    <span class="fab fa-fw fa-google"></span> Sign in with Google
+                </a>
+                <a href="#" class="btn btn-block btn-facebook btn-social">
+                    <span class="fab fa-fw fa-facebook"></span> Sign in with Facebook
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            <section>
+                <p class="m-0">
+                    <span>Sekarang Jam</span>
+                    <span class="bg-primary text-white p-1 px-2 rounded" id="clock">H:i:s</span>
+                </p>
+            </section>
+            <section>
+                <img src="img/login.svg" alt="Login" style="width: 25em;" />
+                <h2 class="title">Halaman Area Pelanggan</h2>
+                <p class="subtitle">Silahkan masuk menggunakan akun anda dan nikmati berbagai fitur yang kami hadirkan. Keluarlah dengan aman agar tidak terkena peretasan.</p>
+            </section>
+            <footer>
+                <span>Hak Cipta 2021, <a href="index.html">Moderna Admin</a></span>
+            </footer>
+        </div>
+    </main>
 
     <!-- Core -->
     <script src="js/jquery.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core -->
+    <script src="js/moderna-admin/all.js"></script>
 </body>
+
 </html>

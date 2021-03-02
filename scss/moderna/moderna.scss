@@ -1,5 +1,8 @@
 // Core
 
+// Pages
+@import "pages/login";
+
 // Styling
 @import "styling/alerts";
 @import "styling/buttons";
@@ -8,7 +11,7 @@
 
 body {
     font-family: 'Rubik', 'Segoe UI', Arial, Helvetica, sans-serif;
-    background: $gray-100;
+    background: $gray-200;
 }
 
 ::-webkit-scrollbar {

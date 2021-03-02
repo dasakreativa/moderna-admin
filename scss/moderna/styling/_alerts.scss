@@ -20,5 +20,9 @@
                 @include alert-icon-dim-color($color);
             }
         }
+
+        &-alt-#{$color} {
+            @include alert-alt($value, $color);
+        }
     }
 }

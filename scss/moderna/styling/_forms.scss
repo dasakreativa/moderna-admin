@@ -12,7 +12,7 @@
 
         >label.label,
         .form-control {
-            background-color: $gray-100;
+            background-color: $gray-200;
         }
     }
 
@@ -28,14 +28,14 @@
         font-weight: normal;
         cursor: pointer;
         z-index: 3;
-        transition: top .2s ease-out, background .1s linear;
+        transition: .3s all;
     }
 
     .form-control {
         &:placeholder-shown:not(:focus)~label {
             top: .425rem;
             left: .75rem;
-            font-size: 1rem;
+            font-size: .9rem;
             color: $gray-600;
             padding: 0;
         }
@@ -48,6 +48,16 @@
 
         &::-ms-clear {
             display: none;
+        }
+
+        &.is-invalid + label,
+        &.is-invalid:placeholder-shown {
+            color: $danger !important;
+        }
+
+        &.is-valid + label,
+        &.is-valid:placeholder-shown {
+            color: $success !important;
         }
     }
 }
