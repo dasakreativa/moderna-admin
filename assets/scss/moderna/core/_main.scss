@@ -1,0 +1,81 @@
+.sidebar-fixed {
+    position: relative;
+    display: flex;
+
+    >* {
+        transition: .3s all;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: $sidebar-wrapper-width-lg;
+        height: 100vh;
+        z-index: 1000;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        @include media-breakpoint-up('md') {
+            .toggled & {
+                width: $sidebar-wrapper-width-sm;
+                overflow: visible;
+                position: relative;
+            }
+        }
+
+        @include media-breakpoint-down('md') {
+            margin-left: calc(-#{$sidebar-wrapper-width-lg} - 1rem);
+
+            .toggled & {
+                background: $gray-200;
+                border-radius: 0 15px 15px 0;
+                margin: 0 !important;
+            }
+        }
+
+        &.sidebar-light {
+            .sidebar-header {
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                min-height: 4rem;
+
+                a {
+                    width: 100%;
+                    flex: 1;
+                    padding: .5rem 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        max-height: 2.25rem;
+                        width: auto;
+
+                        @include media-breakpoint-up('md') {
+                            .toggled &:first-child {
+                                display: none !important;
+                            }
+                        }
+
+                        &:last-child {
+                            display: none !important;
+
+                            @include media-breakpoint-up('md') {
+                                .toggled & {
+                                    display: block !important;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .toggler {
+                    padding: .5rem 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

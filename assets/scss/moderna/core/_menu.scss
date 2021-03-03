@@ -1,0 +1,241 @@
+.sidebar-fixed {
+    .sidebar-light {
+        .sidebar-menu {
+            padding: 1rem;
+
+            @include media-breakpoint-up('md') {
+                .toggled & {
+                    padding: 1rem .5rem;
+                }
+            }
+
+            .nav-link,
+            .sidebar-link {
+                &.disabled {
+                    pointer-events: none;
+                    cursor: not-allowed;
+                    text-decoration: none;
+                    color: black;
+                    opacity: .75;
+                }
+            }
+
+            >.nav-item {
+                background: transparent;
+                border-radius: 5px;
+                position: relative;
+
+                >.nav-link {
+                    display: flex;
+                    justify-content: space-between;
+                    color: $dark;
+                    padding: .75rem 1rem;
+                    transition: .15s all;
+                    border-radius: 5px;
+                    border: 1px solid transparent;
+
+                    @include media-breakpoint-up('md') {
+                        .toggled & {
+                            justify-content: center;
+                            padding: .75rem .25rem;
+                        }
+                    }
+
+                    &:hover {
+                        background: rgba($white, 1);
+                        color: $primary;
+                        border: 1px solid $primary;
+                    }
+
+                    &:active,
+                    &.active,
+                    &:focus,
+                    &.focus {
+                        background: rgba($primary, 1);
+                        color: $white;
+                    }
+
+                    .left {
+                        display: flex;
+
+                        .icon {
+                            padding-right: .5rem;
+
+                            @include media-breakpoint-up('md') {
+                                .toggled & {
+                                    padding: 0;
+                                }
+                            }
+                        }
+
+                        @include media-breakpoint-up('md') {
+                            .toggled & span {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    @include media-breakpoint-up('md') {
+                        .toggled & .right {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.active {
+                    background: rgba($white, 1);
+                    border-radius: 5px;
+
+                    @include media-breakpoint-up('md') {
+                        .toggled & {
+                            border: 0;
+                        }
+                    }
+
+                    .nav-link {
+                        border: 1px solid rgba($primary, 1);
+                        border-radius: 5px 5px 0 0;
+
+                        @include media-breakpoint-up('md') {
+                            .toggled & {
+                                border: 0;
+                                border-radius: 5px;
+                            }
+                        }
+
+                        &:hover {
+                            color: $primary;
+                        }
+
+                        &:active,
+                        &.active,
+                        &:focus,
+                        &.focus {
+                            background: rgba($primary, 1);
+                            color: $white;
+                        }
+                    }
+                }
+
+                >.sidebar-container {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    @include media-breakpoint-up('md') {
+                        .toggled &.collapsing {
+                            transition: 0;
+                            display: none;
+                            height: 0;
+                            width: 0;
+                            height: 0;
+                        }
+                    }
+
+                    >.sidebar-inner {
+                        display: flex;
+                        flex-direction: column;
+                        border: 1px solid rgba($primary, 1);
+                        border-top: 0;
+                        border-radius: 0 0 5px 5px;
+
+                        @include media-breakpoint-up('md') {
+                            .toggled & {
+                                position: absolute;
+                                z-index: 3;
+                                min-width: 15rem;
+                                margin-top: -3rem;
+                                margin-left: 5rem;
+                                background: $white;
+                                border: 1px solid $primary !important;
+                                border-radius: 5px;
+                            }
+                        }
+
+                        >.sidebar-item {
+                            background: transparent;
+                            border-radius: 5px;
+                            position: static;
+
+                            .sidebar-link {
+                                padding: .5rem 1rem;
+                                display: flex;
+                                justify-content: space-between;
+                                color: $dark;
+                                text-decoration: none;
+                                transition: .15s all;
+
+                                &:hover,
+                                &:active {
+                                    color: $primary;
+                                }
+
+                                .left {
+                                    display: flex;
+
+                                    .icon {
+                                        padding-right: .5rem;
+                                    }
+                                }
+                            }
+
+                            .sidebar-container {
+                                list-style: none;
+                                padding-left: 1.4rem !important;
+                                margin: 0;
+                                border-top: 1px solid rgba($primary, 1);
+                                border-bottom: 1px solid rgba($primary, 1);
+
+                                &:last-child {
+                                    border-bottom-color: transparent;
+                                }
+
+                                >.sidebar-inner {
+                                    >.sidebar-item {
+                                        margin: 0;
+                                        padding: 0 7px;
+                                        line-height: 20px;
+                                        border-left: 1px solid rgba($primary, 1);
+                                        display: flex;
+                                        align-items: center;
+
+                                        &:before {
+                                            position: relative;
+                                            top: -0.3em;
+                                            height: .5rem;
+                                            width: 1rem;
+                                            color: white;
+                                            border-bottom: 1px solid rgba($primary, 1);
+                                            content: "";
+                                            display: inline-block;
+                                            left: -7px;
+                                        }
+
+                                        >.sidebar-link {
+                                            transition: .15s all;
+                                            text-decoration: none;
+                                            padding: .5rem .25rem;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            flex: 1;
+
+                                            &:hover,
+                                            &:active {
+                                                margin-left: .5rem;
+                                                color: $primary;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:not(:last-child)>.sidebar-container {
+                                border-bottom: 1px solid rgba($primary, 1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

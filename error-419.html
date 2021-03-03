@@ -21,16 +21,17 @@
 
     <main class="row min-vh-100 no-gutters">
         <div class="col-md-4 bg-dark d-flex align-items-center">
-            <img src="assets/img/error-405-method-not-allowed.svg" class="w-100 text-center" />
+            <img src="assets/img/error-503-service-unavailable.svg" class="w-100 text-center" />
         </div>
         <div class="col-md-8 d-flex flex-column justify-content-between">
             <div>&nbsp;</div>
             <div class="p-4">
                 <h1>Kesalahan</h1>
-                <h3 class="text-muted">Kesalahan 405 &mdash; Metode Akses Tidak Diperbolehkan</h3>
-                <p>Ups, maaf! Halaman yang anda akses saat ini tidak memperbolehkan anda menggunakan method {$nama_method}.</p>
+                <h3 class="text-muted">Kesalahan 419 &mdash; Sesi Habis</h3>
+                <p>Ups, maaf! Halaman yang anda akses saat ini tidak dapat ditampilkan oleh peladen.</p>
                 <hr>
                 <div class="d-md-flex">
+                    <button class="btn btn-primary mb-md-0 mb-3 mr-2" onclick="javascript:location.reload();"><i class="fas fa-sync mr-2"></i>Muat Ulang Halaman</button>
                     <button class="btn btn-primary mb-md-0 mb-3 mr-2" onclick="javascript:history.back();"><i class="fas fa-arrow-left mr-2"></i>Kembali ke Halaman Sebelumnya</button>
                     <a href="index.html" class="btn btn-outline-primary mb-md-0 mb-3 mr-2"><i class="fas fa-home mr-2"></i>Kembali Ke Rumah</a>
                 </div>
