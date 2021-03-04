@@ -36,7 +36,7 @@
     padding-left: 3.5rem;
     text-align: left;
 
-    >.fab {
+    >.icon {
         position: absolute;
         display: flex;
         justify-content: center;
@@ -46,18 +46,19 @@
         left: 0;
         @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
         border: 1px solid transparent;
+        height: 100%;
         border-right-width: 1px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
 
-    &.btn-icon > .fab {
+    &.btn-icon > .icon {
         border-right-width: 0 !important;
     }
 
     &.btn-lg {
         padding-left: 4.5rem;
-        >.fab {
+        >.icon {
             width: 3rem;
             border-top-right-radius: 0 !important;
             border-bottom-right-radius: 0 !important;
@@ -67,7 +68,7 @@
 
     &.btn-sm {
         padding-left: 3rem;
-        >.fab {
+        >.icon {
             width: 2rem;
             border-top-right-radius: 0 !important;
             border-bottom-right-radius: 0 !important;

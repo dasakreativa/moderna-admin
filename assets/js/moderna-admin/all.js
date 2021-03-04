@@ -48,6 +48,14 @@
         $('body').toggleClass('toggled');
     });
 
+    $(document).on('click', '.mega-menu .dropdown-menu', function(e) {
+        e.preventDefault();
+        e.stopProopagation();
+
+        $(this).parent().toggleClass('open');
+        return false;
+    })
+
     $(document).ready(function () {
         $('.sidebar-menu').metisMenu({
 

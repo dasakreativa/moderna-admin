@@ -9,6 +9,28 @@
                 }
             }
 
+            .sidebar-head {
+                padding: .25rem 1rem;
+                font-weight: 500;
+                color: $gray-700;
+
+                &:not(:first-child) {
+                    margin-top: .5rem;
+                }
+
+                @include media-breakpoint-up('md') {
+                    .toggled & {
+                        border-bottom: 1px solid $gray-300;
+                        margin: .5rem;
+                        padding: 0;
+
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
             .nav-link,
             .sidebar-link {
                 &.disabled {
@@ -86,20 +108,15 @@
                     background: rgba($white, 1);
                     border-radius: 5px;
 
-                    @include media-breakpoint-up('md') {
-                        .toggled & {
-                            border: 0;
-                        }
-                    }
-
                     .nav-link {
-                        border: 1px solid rgba($primary, 1);
+                        border: 1px solid rgba($gray-500, 1);
                         border-radius: 5px 5px 0 0;
+                        border-bottom: 0;
 
                         @include media-breakpoint-up('md') {
                             .toggled & {
-                                border: 0;
                                 border-radius: 5px;
+                                border-bottom: 1px solid rgba($gray-500, 1);
                             }
                         }
 
@@ -135,9 +152,11 @@
                     >.sidebar-inner {
                         display: flex;
                         flex-direction: column;
-                        border: 1px solid rgba($primary, 1);
+                        border: 1px solid rgba($gray-500, 1);
                         border-top: 0;
                         border-radius: 0 0 5px 5px;
+                        max-height: 15rem;
+                        overflow-y: auto;
 
                         @include media-breakpoint-up('md') {
                             .toggled & {
@@ -149,6 +168,9 @@
                                 background: $white;
                                 border: 1px solid $primary !important;
                                 border-radius: 5px;
+                                animation-name: growIn;
+                                animation-duration: 200ms;
+                                animation-timing-function: transform cubic-bezier(.18, 1.25, .4, 1), opacity cubic-bezier(0, 1, .4, 1);
                             }
                         }
 
@@ -157,6 +179,33 @@
                             border-radius: 5px;
                             position: static;
 
+                            &.active>.sidebar-link,
+                            &>.sidebar-link:hover {
+                                background: rgba($primary, .25);
+                            }
+
+                            &:first-child .sidebar-link {
+                                border-top: 1px solid $gray-500;
+
+                                @include media-breakpoint-up('md') {
+                                    .toggled & {
+                                        border-top: 0 !important;
+                                    }
+                                }
+                            }
+
+                            &.active {
+                                .sidebar-link:first-child {
+                                    border-top: 1px solid $primary;
+
+                                    @include media-breakpoint-up('md') {
+                                        .toggled & {
+                                            border-top: 0 !important;
+                                        }
+                                    }
+                                }
+                            }
+                            
                             .sidebar-link {
                                 padding: .5rem 1rem;
                                 display: flex;
@@ -165,9 +214,12 @@
                                 text-decoration: none;
                                 transition: .15s all;
 
-                                &:hover,
-                                &:active {
-                                    color: $primary;
+                                &:active,
+                                &.active,
+                                &:focus,
+                                &.focus {
+                                    background: rgba($primary, 1);
+                                    color: $white;
                                 }
 
                                 .left {
@@ -181,36 +233,11 @@
 
                             .sidebar-container {
                                 list-style: none;
-                                padding-left: 1.4rem !important;
+                                padding-left: 2.25rem !important;
                                 margin: 0;
-                                border-top: 1px solid rgba($primary, 1);
-                                border-bottom: 1px solid rgba($primary, 1);
-
-                                &:last-child {
-                                    border-bottom-color: transparent;
-                                }
 
                                 >.sidebar-inner {
                                     >.sidebar-item {
-                                        margin: 0;
-                                        padding: 0 7px;
-                                        line-height: 20px;
-                                        border-left: 1px solid rgba($primary, 1);
-                                        display: flex;
-                                        align-items: center;
-
-                                        &:before {
-                                            position: relative;
-                                            top: -0.3em;
-                                            height: .5rem;
-                                            width: 1rem;
-                                            color: white;
-                                            border-bottom: 1px solid rgba($primary, 1);
-                                            content: "";
-                                            display: inline-block;
-                                            left: -7px;
-                                        }
-
                                         >.sidebar-link {
                                             transition: .15s all;
                                             text-decoration: none;
@@ -227,10 +254,6 @@
                                         }
                                     }
                                 }
-                            }
-
-                            &:not(:last-child)>.sidebar-container {
-                                border-bottom: 1px solid rgba($primary, 1);
                             }
                         }
                     }

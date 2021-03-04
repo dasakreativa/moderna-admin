@@ -45,7 +45,7 @@
         color: $hover-color;
         border-color: $hover-background;
 
-        >.fab {
+        >.icon {
             border-right-color: darken($background, 20%);
         }
     }
@@ -57,7 +57,7 @@
         box-shadow: 0 0 0 $btn-focus-width rgba($hover-background, .5);
     }
 
-    >.fab {
+    >.icon {
         border-right-color: darken($background, 10%);
     }
 }

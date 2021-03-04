@@ -7,6 +7,7 @@
         border-radius: 15px 0 0 15px;
         display: flex;
         flex-direction: column;
+        border-left: 1px solid $gray-300;
 
         @include media-breakpoint-up('md') {
             .toggled & {
@@ -16,6 +17,7 @@
         }
 
         @include media-breakpoint-down('md') {
+            border-left: 1px solid transparent;
             width: 100%;
             border-radius: 0;
             margin-left: 0;

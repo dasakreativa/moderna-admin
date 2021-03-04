@@ -1,19 +1,21 @@
 // For Admin Variable
 $login-wrapper-width-lg:    30rem;
 $login-wrapper-width-sm:    22rem;
-$sidebar-wrapper-width-lg:  22.5rem;
+$sidebar-wrapper-width-lg:  20rem;
 $sidebar-wrapper-width-sm:  4.375rem;
 
 // Core
 @import "core/container";
 @import "core/main";
 @import "core/menu";
+@import "core/navbar";
 
 // Pages
 @import "pages/errors";
 @import "pages/login";
 
 // Styling
+@import "styling/animation";
 @import "styling/alerts";
 @import "styling/borders";
 @import "styling/buttons";
@@ -22,7 +24,7 @@ $sidebar-wrapper-width-sm:  4.375rem;
 
 body {
     font-family: 'Rubik', 'Segoe UI', Arial, Helvetica, sans-serif;
-    background: $gray-200;
+    background: $gray-100;
 }
 
 ::-webkit-scrollbar {

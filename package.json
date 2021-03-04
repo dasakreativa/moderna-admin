@@ -4,5 +4,30 @@
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "toastr": "^2.1.4"
-  }
+  },
+  "name": "moderna-admin",
+  "description": "Template admin Bootstrap 4.6.x yang responsif dan elegan.",
+  "version": "0.1.1",
+  "main": null,
+  "scripts": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dasakreativa/moderna-admin.git"
+  },
+  "keywords": [
+    "admin",
+    "admin-bootstrap",
+    "admin-bootstrap4",
+    "bootstrap4",
+    "responsive-admin",
+    "ltr-admin"
+  ],
+  "author": "Dasa Kreativa Studio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dasakreativa/moderna-admin/issues"
+  },
+  "homepage": "https://github.com/dasakreativa/moderna-admin#readme"
 }

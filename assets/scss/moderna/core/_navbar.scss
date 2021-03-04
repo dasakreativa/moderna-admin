@@ -1,0 +1,27 @@
+.nav-item {
+
+    &.no-arrow > a.nav-link::after {
+        display: none !important;
+        width: 0 !important;
+    }
+
+    @include media-breakpoint-down('md') {
+        &.static {
+            position: static;
+        }
+
+        .dropdown-menu {
+            width: calc(100% - (1rem * 2));
+            margin: 0 1rem;
+        }
+    }
+
+    &.mega-menu.static {
+        position: static;
+
+        .dropdown-menu {
+            width: calc(100% - (1rem * 2));
+            margin: 0 1rem;
+        }
+    }
+}
