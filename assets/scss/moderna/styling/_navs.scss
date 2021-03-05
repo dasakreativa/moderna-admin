@@ -23,5 +23,31 @@
                 margin-right: 0;
             }
         }
+
+        &.nav-pills-horizontal {
+            .nav-item {
+                .nav-link {
+                    border-bottom: 1px solid $gray-400;
+                    margin: 0 .25rem;
+                    transition: border .1s all;
+                    border-radius: 0;
+                    background-color: transparent;
+                    color: $dark;
+                    margin: 0;
+    
+                    &:active,
+                    &.active,
+                    &:focus,
+                    &:hover {
+                        border-bottom: 2px solid $primary;
+                        color: $primary;
+                    }
+
+                    &.disabled {
+                        opacity: .5;
+                    }
+                }
+            }   
+        }
     }
 }

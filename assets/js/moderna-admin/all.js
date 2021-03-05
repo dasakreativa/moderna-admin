@@ -1,7 +1,7 @@
 (function ($) {
     "use strict";
 
-    $.clocker = ($target) => {
+    $.clocker = ($target, $html) => {
         var months = [
             'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
         ];
@@ -33,7 +33,7 @@
             var dateString = dayOfWeek + ', ' + month + ' ' + day + ', ' + year,
                 clock = hours + ' : ' + minutes + ' : ' + seconds;
 
-            $($target).text(clock);
+            $($target).html($html + clock);
 
         }
 
@@ -42,7 +42,7 @@
     };
 
     $.clocker('#clock');
-    $.clocker('#clockwrap');
+    $.clocker('#clockwrap', '<span class="mr-1 d-none d-lg-inline d-md-none">Sekarang Jam</span>');
 
     $('.btn-toggler').click(() => {
         $('body').toggleClass('toggled');
@@ -54,7 +54,7 @@
 
         $(this).parent().toggleClass('open');
         return false;
-    })
+    });
 
     $(document).ready(function () {
         $('.sidebar-menu').metisMenu({
@@ -81,5 +81,9 @@
             subMenu: 'ul'
 
         });
-    })
+    });
+    
+    jQuery(document).ready(function(){
+        jQuery('.scrollbar-macosx').scrollbar();
+    });
 })(jQuery);

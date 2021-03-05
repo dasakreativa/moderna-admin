@@ -12,6 +12,8 @@
 
     <!-- Core -->
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
 
     <!-- Addons -->
     <link rel="stylesheet" href="assets/addons/animate.css/animate.min.css" />
@@ -21,7 +23,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
         <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="index.html">Moderna Admin</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -60,6 +62,70 @@
     </nav>
 
     <div class="container">
+
+        <div class="my-5">
+            <h3>Widget Dashboard Summary</h3>
+            <p class="text-muted">Widget item untuk menampilkan ringkasan.</p>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card card-widgets card-widgets_summary card-widgets_summary-success">
+                        <div class="icon">
+                            <i class="fas fa-money-bill-alt"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">Pendapatan</h3>
+                            <p class="subtitle">IDR 3,5jt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card card-widgets card-widgets_summary card-widgets_summary-danger">
+                        <div class="icon">
+                            <i class="fas fa-file"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">Berkas</h3>
+                            <p class="subtitle">20,55jt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card card-widgets card-widgets_summary card-widgets_summary-info">
+                        <div class="icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">Unduhan</h3>
+                            <p class="subtitle">7,5jt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card card-widgets card-widgets_summary card-widgets_summary-warning">
+                        <div class="icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="content">
+                            <h3 class="title">Antrian</h3>
+                            <p class="subtitle">2,7jt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-5">
+            <h3>Avatar</h3>
+
+            <div class="d-flex">
+                <span class="avatar avatar-success avatar-xs">AD</span>
+                <span class="avatar avatar-success avatar-sm">AD</span>
+                <span class="avatar avatar-success">AD</span>
+                <span class="avatar avatar-success avatar-lg">AD</span>
+                <span class="avatar avatar-success avatar-xl">AD</span>
+            </div>
+        </div>
+
         <div class="row mt-5">
             <div class="col-md-6">
                 <!-- Button trigger modal -->
@@ -88,70 +154,75 @@
                     </div>
                 </div>
 
-                <div class="mb-3">
-                    <a class="btn btn-social btn-sm mb-2 mr-2 btn-adn" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-adn']);">
-                      <span class="fab icon fa-adn"></span> Sign in with App.net
-                    </a>
-                    <a class="btn btn-social btn-lg mb-2 btn-bitbucket" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-bitbucket']);">
-                      <span class="fab icon fa-bitbucket"></span> Sign in with Bitbucket
-                    </a>
-                    <a class="btn btn-social mb-2 btn-dropbox" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-dropbox']);">
-                      <span class="fab icon fa-dropbox"></span> Sign in with Dropbox
-                    </a>
-                    <a class="btn btn-social btn-block btn-facebook" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-facebook']);">
-                      <span class="fab icon fa-facebook"></span> Sign in with Facebook
-                    </a>
-                    <a class="btn btn-social btn-block btn-flickr" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-flickr']);">
-                      <span class="fab icon fa-flickr"></span> Sign in with Flickr
-                    </a>
-                    <a class="btn btn-social btn-block btn-foursquare" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-foursquare']);">
-                      <span class="fab icon fa-foursquare"></span> Sign in with Foursquare
-                    </a>
-                    <a class="btn btn-social btn-block btn-github" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-github']);">
-                      <span class="fab icon fa-github"></span> Sign in with GitHub
-                    </a>
-                    <a class="btn btn-social btn-block btn-google" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-google']);">
-                      <span class="fab icon fa-google"></span> Sign in with Google
-                    </a>
-                    <a class="btn btn-social btn-block btn-instagram" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-instagram']);">
-                      <span class="fab icon fa-instagram"></span> Sign in with Instagram
-                    </a>
-                    <a class="btn btn-social btn-block btn-linkedin" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-linkedin']);">
-                      <span class="fab icon fa-linkedin"></span> Sign in with LinkedIn
-                    </a>
-                    <a class="btn btn-social btn-block btn-microsoft" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-microsoft']);">
-                      <span class="fab icon fa-windows"></span> Sign in with Microsoft
-                    </a>
-                    <a class="btn btn-social btn-block btn-odnoklassniki" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-odnoklassniki']);">
-                      <span class="fab icon fa-odnoklassniki"></span> Sign in with Odnoklassniki
-                    </a>
-                    <a class="btn btn-social btn-block btn-openid" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-openid']);">
-                      <span class="fab icon fa-openid"></span> Sign in with OpenID
-                    </a>
-                    <a class="btn btn-social btn-block btn-pinterest" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-pinterest']);">
-                      <span class="fab icon fa-pinterest"></span> Sign in with Pinterest
-                    </a>
-                    <a class="btn btn-social btn-block btn-reddit" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-reddit']);">
-                      <span class="fab icon fa-reddit"></span> Sign in with Reddit
-                    </a>
-                    <a class="btn btn-social btn-block btn-soundcloud" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-soundcloud']);">
-                      <span class="fab icon fa-soundcloud"></span> Sign in with SoundCloud
-                    </a>
-                    <a class="btn btn-social btn-block btn-tumblr" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-tumblr']);">
-                      <span class="fab icon fa-tumblr"></span> Sign in with Tumblr
-                    </a>
-                    <a class="btn btn-social btn-block btn-twitter" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-twitter']);">
-                      <span class="fab icon fa-twitter"></span> Sign in with Twitter
-                    </a>
-                    <a class="btn btn-social btn-block btn-vimeo" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-vimeo']);">
-                      <span class="fab icon fa-vimeo-square"></span> Sign in with Vimeo
-                    </a>
-                    <a class="btn btn-social btn-block btn-vk" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-vk']);">
-                      <span class="fab icon fa-vk"></span> Sign in with VK
-                    </a>
-                    <a class="btn btn-social btn-block btn-yahoo" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-yahoo']);">
-                      <span class="fab icon fa-yahoo"></span> Sign in with Yahoo!
-                    </a>
+                <div class="my-3">
+                    <h3>Social Media Buttons</h3>
+                    <p class="text-muted">Tombol aksi sosial media.</p>
+
+                    <div class="mb-3">
+                        <a class="btn btn-social btn-sm mb-2 mr-2 btn-adn" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-adn']);">
+                          <span class="fab icon fa-adn"></span> Sign in with App.net
+                        </a>
+                        <a class="btn btn-social btn-lg mb-2 btn-bitbucket" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-bitbucket']);">
+                          <span class="fab icon fa-bitbucket"></span> Sign in with Bitbucket
+                        </a>
+                        <a class="btn btn-social mb-2 btn-dropbox" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-dropbox']);">
+                          <span class="fab icon fa-dropbox"></span> Sign in with Dropbox
+                        </a>
+                        <a class="btn btn-social btn-block btn-facebook" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-facebook']);">
+                          <span class="fab icon fa-facebook"></span> Sign in with Facebook
+                        </a>
+                        <a class="btn btn-social btn-block btn-flickr" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-flickr']);">
+                          <span class="fab icon fa-flickr"></span> Sign in with Flickr
+                        </a>
+                        <a class="btn btn-social btn-block btn-foursquare" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-foursquare']);">
+                          <span class="fab icon fa-foursquare"></span> Sign in with Foursquare
+                        </a>
+                        <a class="btn btn-social btn-block btn-github" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-github']);">
+                          <span class="fab icon fa-github"></span> Sign in with GitHub
+                        </a>
+                        <a class="btn btn-social btn-block btn-google" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-google']);">
+                          <span class="fab icon fa-google"></span> Sign in with Google
+                        </a>
+                        <a class="btn btn-social btn-block btn-instagram" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-instagram']);">
+                          <span class="fab icon fa-instagram"></span> Sign in with Instagram
+                        </a>
+                        <a class="btn btn-social btn-block btn-linkedin" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-linkedin']);">
+                          <span class="fab icon fa-linkedin"></span> Sign in with LinkedIn
+                        </a>
+                        <a class="btn btn-social btn-block btn-microsoft" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-microsoft']);">
+                          <span class="fab icon fa-windows"></span> Sign in with Microsoft
+                        </a>
+                        <a class="btn btn-social btn-block btn-odnoklassniki" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-odnoklassniki']);">
+                          <span class="fab icon fa-odnoklassniki"></span> Sign in with Odnoklassniki
+                        </a>
+                        <a class="btn btn-social btn-block btn-openid" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-openid']);">
+                          <span class="fab icon fa-openid"></span> Sign in with OpenID
+                        </a>
+                        <a class="btn btn-social btn-block btn-pinterest" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-pinterest']);">
+                          <span class="fab icon fa-pinterest"></span> Sign in with Pinterest
+                        </a>
+                        <a class="btn btn-social btn-block btn-reddit" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-reddit']);">
+                          <span class="fab icon fa-reddit"></span> Sign in with Reddit
+                        </a>
+                        <a class="btn btn-social btn-block btn-soundcloud" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-soundcloud']);">
+                          <span class="fab icon fa-soundcloud"></span> Sign in with SoundCloud
+                        </a>
+                        <a class="btn btn-social btn-block btn-tumblr" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-tumblr']);">
+                          <span class="fab icon fa-tumblr"></span> Sign in with Tumblr
+                        </a>
+                        <a class="btn btn-social btn-block btn-twitter" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-twitter']);">
+                          <span class="fab icon fa-twitter"></span> Sign in with Twitter
+                        </a>
+                        <a class="btn btn-social btn-block btn-vimeo" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-vimeo']);">
+                          <span class="fab icon fa-vimeo-square"></span> Sign in with Vimeo
+                        </a>
+                        <a class="btn btn-social btn-block btn-vk" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-vk']);">
+                          <span class="fab icon fa-vk"></span> Sign in with VK
+                        </a>
+                        <a class="btn btn-social btn-block btn-yahoo" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-yahoo']);">
+                          <span class="fab icon fa-yahoo"></span> Sign in with Yahoo!
+                        </a>
+                    </div>
                 </div>
 
                 <div class="form-floating mb-3 bg-body">
@@ -209,44 +280,67 @@
                     </div>
                     <div class="input-group-append"><button class="btn btn-primary">Hello</button></div>
                 </div>
+                
+                <div class="my-3">
 
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Active</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
 
-                <button type="button" class="btn btn-primary">Primary</button>
-                <button type="button" class="btn btn-secondary">Secondary</button>
-                <button type="button" class="btn btn-tersier">Tersier</button>
-                <button type="button" class="btn btn-success">Success</button>
-                <button type="button" class="btn btn-danger">Danger</button>
-                <button type="button" class="btn btn-warning">Warning</button>
-                <button type="button" class="btn btn-info">Info</button>
-                <button type="button" class="btn btn-light">Light</button>
-                <button type="button" class="btn btn-dark">Dark</button>
-                <button type="button" class="btn btn-link">Link</button>
+                    <ul class="nav nav-pills nav-pills-horizontal">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
 
-                <button type="button" class="btn btn-dim btn-primary">Primary</button>
-                <button type="button" class="btn btn-dim btn-secondary">Secondary</button>
-                <button type="button" class="btn btn-dim btn-tersier">Tersier</button>
-                <button type="button" class="btn btn-dim btn-success">Success</button>
-                <button type="button" class="btn btn-dim btn-danger">Danger</button>
-                <button type="button" class="btn btn-dim btn-warning">Warning</button>
-                <button type="button" class="btn btn-dim btn-info">Info</button>
-                <button type="button" class="btn btn-dim btn-light">Light</button>
-                <button type="button" class="btn btn-dim btn-dark">Dark</button>
+                </div>
 
-                <div class="card bg-dark card-body d-flex flex-row">
+                <div class="mb-3">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                    <button type="button" class="btn btn-tersier">Tersier</button>
+                    <button type="button" class="btn btn-success">Success</button>
+                    <button type="button" class="btn btn-danger">Danger</button>
+                    <button type="button" class="btn btn-warning">Warning</button>
+                    <button type="button" class="btn btn-info">Info</button>
+                    <button type="button" class="btn btn-light">Light</button>
+                    <button type="button" class="btn btn-dark">Dark</button>
+                    <button type="button" class="btn btn-link">Link</button>
+                </div>
+
+                <div class="mb-3">
+                    <button type="button" class="btn btn-dim btn-primary">Primary</button>
+                    <button type="button" class="btn btn-dim btn-secondary">Secondary</button>
+                    <button type="button" class="btn btn-dim btn-tersier">Tersier</button>
+                    <button type="button" class="btn btn-dim btn-success">Success</button>
+                    <button type="button" class="btn btn-dim btn-danger">Danger</button>
+                    <button type="button" class="btn btn-dim btn-warning">Warning</button>
+                    <button type="button" class="btn btn-dim btn-info">Info</button>
+                    <button type="button" class="btn btn-dim btn-light">Light</button>
+                    <button type="button" class="btn btn-dim btn-dark">Dark</button>
+                </div>
+
+                <div class="card bg-dark card-body d-flex flex-row overflow-auto">
                     <button type="button" class="btn btn-dim-alt btn-primary">Primary</button>
                     <button type="button" class="btn btn-dim-alt btn-secondary">Secondary</button>
                     <button type="button" class="btn btn-dim-alt btn-tersier">Tersier</button>
@@ -256,6 +350,12 @@
                     <button type="button" class="btn btn-dim-alt btn-info">Info</button>
                     <button type="button" class="btn btn-dim-alt btn-light">Light</button>
                     <button type="button" class="btn btn-dim-alt btn-dark">Dark</button>
+                </div>
+
+                <div class="my-4">
+                    <div class="shadow-sm bg-white p-3 rounded">
+                        Hello
+                    </div>
                 </div>
             </div>
             <div class="col-md-6">

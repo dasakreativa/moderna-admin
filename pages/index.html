@@ -12,118 +12,369 @@
 
     <!-- Core -->
     <link rel="stylesheet" href="../assets/css/bootstrap.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+
+    <!-- Addons -->
+    <link rel="stylesheet" href="../assets/addons/jquery-scrollbar/jquery.scrollbar.css" /> 
 </head>
 
 <body>
 
     <div class="sidebar-fixed">
         <section class="sidebar sidebar-light sidebar-white">
-            <div class="sidebar-header">
-                <a href="index.html" class="sidebar-header-link">
-                    <img src="../assets/img/brands/svg/logo-color.svg" alt="Logo" />
-                    <img src="../assets/img/brands/svg/icon-color.svg" alt="Logo" />
-                </a>
-                <div class="toggler d-md-none">
-                    <button class="btn btn-toggler btn-outline-primary">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-            <ul class="sidebar-menu nav flex-column" id="main-menu">
-                <div class="sidebar-head"><span>Dashboard</span></div>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <div class="left">
-                            <div class="icon">
-                                <i class="fas fa-tachometer-alt fa-fw"></i>
-                            </div>
-                            <span>Dasbor</span>
-                        </div>
-                        <div class="right">
-                            <i class="fas fa-chevron-right fa-fw"></i>
-                        </div>
+            <div class="sidebar-wrapper-inner scrollbar-macosx">
+                <div class="sidebar-title">
+                    <a href="index.html" class="sidebar-title-link">
+                        <img src="../assets/img/brands/svg/logo-color.svg" alt="Logo Moderna Admin" />
                     </a>
-                    <ul class="sidebar-container">
-                        <div class="sidebar-inner">
-                            <li class="sidebar-item">
-                                <a href="" class="sidebar-link active">
-                                    <div class="left">
-                                        <div class="icon">
-                                            <i class="fas fa-arrow-right fa-fw"></i>
-                                        </div>
-                                        <span>Crypto</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="" class="sidebar-link">
-                                    <div class="left">
-                                        <div class="icon">
-                                            <i class="fas fa-arrow-right fa-fw"></i>
-                                        </div>
-                                        <span>Menu</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="" class="sidebar-link">
-                                    <div class="left">
-                                        <div class="icon">
-                                            <i class="fas fa-arrow-right fa-fw"></i>
-                                        </div>
-                                        <span>Menu</span>
-                                    </div>
-                                </a>
-                            </li>
+                    <div class="toggler d-md-none">
+                        <button class="btn btn-toggler btn-outline-primary">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="sidebar-widget">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <div class="profile">
+                                <span class="avatar-sm avatar avatar-primary">AZ</span>
+                            </div>
+                            <div class="ml-2">
+                                <p class="font-weight-bold mb-0">Amir Zuhdi Wibowo</p>
+                                <p class="mb-0 text-primary">XII MIPA 1</p>
+                            </div>
                         </div>
-                    </ul>
-                </li>
-            </ul>
-            <div class="sidebar-footer"></div>
+                        <div class="dropdown float-right no-arrow">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-comment fa-fw"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <a href="" class="btn btn-block btn-primary"><i class="fas fa-pencil-alt mr-2"></i>Edit Profil</a>
+                        </div>
+                        <div class="col-6">
+                            <a href="" class="btn btn-block btn-danger"><i class="fas fa-sign-out-alt mr-2"></i>Keluar</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <ul class="sidebar-menu flex-column" id="main-menu">
+                    <div class="nav-title"><span>Dashboard</span></div>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            <div class="left">
+                                <div class="icon">
+                                    <i class="fas fa-tachometer-alt fa-fw"></i>
+                                </div>
+                                <span class="ml-2">Dasbor</span>
+                            </div>
+                            <div class="right">
+                                <i class="fas fa-chevron-right fa-fw"></i>
+                            </div>
+                        </a>
+                        <ul class="sidebar-container">
+                            <div class="sidebar-inner nav">
+                                <li class="nav-item active">
+                                    <a href="" class="nav-link">
+                                        <div class="left">
+                                            <div class="icon">
+                                                <i class="fas fa-arrow-right fa-fw"></i>
+                                            </div>
+                                            <span class="ml-2">E-Learning</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <div class="left">
+                                            <div class="icon">
+                                                <i class="fas fa-arrow-right fa-fw"></i>
+                                            </div>
+                                            <span class="ml-2">Crypto</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <div class="left">
+                                            <div class="icon">
+                                                <i class="fas fa-arrow-right fa-fw"></i>
+                                            </div>
+                                            <span class="ml-2">Belanja</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <div class="left">
+                                            <div class="icon">
+                                                <i class="fas fa-arrow-right fa-fw"></i>
+                                            </div>
+                                            <span class="ml-2">Menu</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section class="wrap-container">
             <nav class="navbar navbar-expand navbar-light border-bottom" id="topnav">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto align-items-center">
-                        <li class="nav-item">
+                        <li class="nav-item d-lg-none">
                             <button class="btn btn-outline-primary btn-toggler" data-toggle="sidebar">
                                 <span class="fas fa-bars"></span>
                             </button>
                         </li>
-                        <li class="nav-item"><span class="nav-link"><span id="clockwrap" class="ml-2"></span></span></li>
+                        <li class="nav-item"><span class="nav-link"><span id="clockwrap" class="ml-2 ml-md-0 border-primary border rounded p-2"></span></span></li>
                     </ul>
                     <ul class="navbar-nav ml-auto align-items-center">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item dropdown static no-arrow">
+                        <li class="nav-item dropdown nav-profile">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="d-flex align-items-center">
                                     <div class="profile">
-                                        <img src="../assets/img/user-mini.png" height="40px" class="rounded-circle" alt="Amir Zuhdi Wibowo" />
+                                        <span class="avatar avatar-xs avatar-primary">AZ</span>
                                     </div>
-                                    <div class="ml-2">
-                                        <p class="font-weight-bold mb-0">Halo Amir</p>
-                                        <p class="mb-0 text-primary">Administrator</p>
+                                    <div class="ml-2 d-none d-md-none d-lg-inline">
+                                        <p class="font-weight-bold mb-0">Amir Zuhdi Wibowo</p>
+                                        <p class="mb-0 text-primary">XII MIPA !</p>
                                     </div>
                                 </div>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-header">
+                                    <div class="user-info">
+                                        <div class="profile-image">
+                                            <span class="avatar avatar-sm avatar-primary">AZ</span>
+                                        </div>
+                                        <div class="detail">
+                                            <p class="title">Halo Amir</p>
+                                            <p class="job">officialcakadi@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="dropdown-item" href="#">Profil</a>
+                                <a class="dropdown-item" href="#">Pengaturan</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item bg-hover-danger bg-focus-danger  bg-active-danger" href="#">Keluar</a>
                             </div>
                         </li>
                     </ul>
                 </div>
             </nav>
             <div class="content">
-                Hello world
-                <i class="fas fa-eee"></i>
+
+                <div class="container-fluid my-3">
+                    <div class="row justify-content-between">
+                        <div class="col-md-8">
+                            <h6 class="text-muted mb-1">Selamat Datang Kembali</h6>
+                            <p class="mb-0 h3">Amir Zuhdi Wibowo</p>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+
+                <div class="my-3 container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card card-widgets card-widgets_classroom card-widgets_classroom-danger">
+                                <div class="card-header">
+                                    <div class="widget-title_wrapper">
+                                        <span class="widget-title_icon">PP</span>
+                                        <div class="widget-desc">
+                                            <p class="mapel">PPKn</p>
+                                            <p class="class">XII MIPA 1</p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown action">
+                                        <button class="btn btn-action dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-widgets card-widgets_classroom">
+                                <div class="card-header card-header-bg" style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../assets/img/login-bg.jpg')">
+                                    <div class="widget-title_wrapper">
+                                        <span class="widget-title_icon">KM</span>
+                                        <div class="widget-desc text-white">
+                                            <p class="mapel">Kimia</p>
+                                            <p class="class">XII MIPA 1</p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown action">
+                                        <button class="btn btn-action dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body pt-4">
+                                    <h6 class="title">Daftar Tugas</h6>
+                                    <div class="list-group list-tugas">
+                                        <a href="#" class="list-group-item">
+                                            <div class="left">
+                                                <p class="mb-0 text-truncate">Tugas Membuat dan Meneliti Struktur Atom</p>
+                                            </div>
+                                            <div class="right">
+                                                <span class="text-muted">17.00</span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <div class="left">
+                                                <p class="mb-0 text-truncate">Ujian Praktek</p>
+                                            </div>
+                                            <div class="right">
+                                                <span class="text-muted">18.30</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-widgets card-widgets_classroom">
+                                <div class="card-header">
+                                    <div class="widget-title_wrapper">
+                                        <span class="widget-title_icon">PJ</span>
+                                        <div class="widget-desc">
+                                            <p class="mapel">PJOK</p>
+                                            <p class="class">XII MIPA 1</p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown action">
+                                        <button class="btn btn-action dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid my-3">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <h4>Aksi Cepat</h4>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item d-flex justify-content-between list-group-item-action">
+                                    <div class="left">
+                                        <p class="mb-0 text-truncate">Tugas Membuat dan Meneliti Struktur Atom</p>
+                                    </div>
+                                    <div class="right">
+                                        <span class="text-muted">17.00</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item d-flex justify-content-between list-group-item-action">
+                                    <div class="left">
+                                        <p class="mb-0 text-truncate">Ujian Praktek</p>
+                                    </div>
+                                    <div class="right">
+                                        <span class="text-muted">18.30</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <h4>Chat Teman Sekelas</h4>
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="row w-100 justify-content-between align-items-center">
+                                        <div class="col-md-10">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="left d-flex align-items-center">
+                                                    <div class="profile">
+                                                        <span class="avatar avatar-primary">AM</span>
+                                                    </div>
+                                                    <div class="desc ml-2">
+                                                        <p class="font-weight-bold mb-0">Afifah Muzarrodah</p>
+                                                        <p class="text-muted mb-0">XII MIPA 1</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span class="badge badge-secondary">2 Menit</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="row w-100 justify-content-between align-items-center">
+                                        <div class="col-md-10">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="left d-flex align-items-center">
+                                                    <div class="profile">
+                                                        <span class="avatar avatar-primary">AM</span>
+                                                    </div>
+                                                    <div class="desc ml-2">
+                                                        <p class="font-weight-bold mb-0">Afifah Muzarrodah</p>
+                                                        <p class="text-muted mb-0">XII MIPA 1</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span class="badge badge-secondary">2 Menit</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="row w-100 justify-content-between align-items-center">
+                                        <div class="col-md-10">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="left d-flex align-items-center">
+                                                    <div class="profile">
+                                                        <span class="avatar avatar-primary">AM</span>
+                                                    </div>
+                                                    <div class="desc ml-2">
+                                                        <p class="font-weight-bold mb-0">Afifah Muzarrodah</p>
+                                                        <p class="text-muted mb-0">XII MIPA 1</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <span class="badge badge-secondary">2 Menit</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <footer class="py-3 mt-3">
                 <div class="container-fluid">
@@ -140,6 +391,7 @@
     <!-- Addons -->
     <script src="../assets/addons/metismenu/dist/metisMenu.min.js"></script>
     <script src="../assets/addons/fontawesome-free/js/all.min.js"></script>
+    <script src="../assets/addons/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
     <!-- Core -->
     <script src="../assets/js/moderna-admin/all.js"></script>

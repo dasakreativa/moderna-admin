@@ -1,257 +1,136 @@
 .sidebar-fixed {
-    .sidebar-light {
-        .sidebar-menu {
-            padding: 1rem;
+    .sidebar {
+        &-light {
+            .sidebar-menu {
+                flex: 1;
+                padding: 1.5rem 1rem;
+                list-style: none;
+                margin-bottom: 0;
 
-            @include media-breakpoint-up('md') {
-                .toggled & {
-                    padding: 1rem .5rem;
-                }
-            }
+                .nav-title {
+                    position: relative;
+                    display: block;
+                    height: 1px;
+                    background: $gray-300;
+                    margin: 1rem 0 1.5rem;
 
-            .sidebar-head {
-                padding: .25rem 1rem;
-                font-weight: 500;
-                color: $gray-700;
+                    &:not(:first-child) {
+                        margin-top: 2rem;
+                    }
 
-                &:not(:first-child) {
-                    margin-top: .5rem;
-                }
-
-                @include media-breakpoint-up('md') {
-                    .toggled & {
-                        border-bottom: 1px solid $gray-300;
-                        margin: .5rem;
-                        padding: 0;
-
-                        span {
-                            display: none;
-                        }
+                    span {
+                        position: absolute;
+                        background: $gray-100;
+                        padding: .2rem .5rem;
+                        margin-top: -.9rem;
+                        border-radius: 5px;
+                        margin-left: 1rem;
+                        border: 1px solid $gray-300;
+                        font-size: .75rem;
                     }
                 }
-            }
 
-            .nav-link,
-            .sidebar-link {
-                &.disabled {
-                    pointer-events: none;
-                    cursor: not-allowed;
-                    text-decoration: none;
-                    color: black;
-                    opacity: .75;
-                }
-            }
+                >.nav-item {
+                    &.active {
+                        >.nav-link {
+                            background-color: $primary;
+                            color: $white;
 
-            >.nav-item {
-                background: transparent;
-                border-radius: 5px;
-                position: relative;
-
-                >.nav-link {
-                    display: flex;
-                    justify-content: space-between;
-                    color: $dark;
-                    padding: .75rem 1rem;
-                    transition: .15s all;
-                    border-radius: 5px;
-                    border: 1px solid transparent;
-
-                    @include media-breakpoint-up('md') {
-                        .toggled & {
-                            justify-content: center;
-                            padding: .75rem .25rem;
+                            .right svg[data-icon="chevron-right"] {
+                                transition: .3s all;
+                                transform: rotate(90deg);
+                            }
                         }
                     }
 
-                    &:hover {
-                        background: rgba($white, 1);
-                        color: $primary;
-                        border: 1px solid $primary;
-                    }
-
-                    &:active,
-                    &.active,
-                    &:focus,
-                    &.focus {
-                        background: rgba($primary, 1);
-                        color: $white;
-                    }
-
-                    .left {
+                    >.nav-link {
                         display: flex;
+                        color: $gray-600;
+                        justify-content: space-between;
+                        align-items: center;
+                        transition: .3s all;
+                        border-radius: 50px;
 
-                        .icon {
-                            padding-right: .5rem;
-
-                            @include media-breakpoint-up('md') {
-                                .toggled & {
-                                    padding: 0;
-                                }
-                            }
-                        }
-
-                        @include media-breakpoint-up('md') {
-                            .toggled & span {
-                                display: none;
-                            }
-                        }
-                    }
-
-                    @include media-breakpoint-up('md') {
-                        .toggled & .right {
-                            display: none;
-                        }
-                    }
-                }
-
-                &.active {
-                    background: rgba($white, 1);
-                    border-radius: 5px;
-
-                    .nav-link {
-                        border: 1px solid rgba($gray-500, 1);
-                        border-radius: 5px 5px 0 0;
-                        border-bottom: 0;
-
-                        @include media-breakpoint-up('md') {
-                            .toggled & {
-                                border-radius: 5px;
-                                border-bottom: 1px solid rgba($gray-500, 1);
-                            }
-                        }
-
+                        // Action Buttons
                         &:hover {
-                            color: $primary;
+                            background-color: rgba($primary, .1);
+                            color: $gray-600;
                         }
 
                         &:active,
                         &.active,
-                        &:focus,
-                        &.focus {
-                            background: rgba($primary, 1);
+                        &:focus {
+                            background-color: $primary;
                             color: $white;
                         }
-                    }
-                }
 
-                >.sidebar-container {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
+                        // For Inner Items
+                        .left {
+                            display: flex;
 
-                    @include media-breakpoint-up('md') {
-                        .toggled &.collapsing {
-                            transition: 0;
-                            display: none;
-                            height: 0;
-                            width: 0;
-                            height: 0;
-                        }
-                    }
-
-                    >.sidebar-inner {
-                        display: flex;
-                        flex-direction: column;
-                        border: 1px solid rgba($gray-500, 1);
-                        border-top: 0;
-                        border-radius: 0 0 5px 5px;
-                        max-height: 15rem;
-                        overflow-y: auto;
-
-                        @include media-breakpoint-up('md') {
-                            .toggled & {
-                                position: absolute;
-                                z-index: 3;
-                                min-width: 15rem;
-                                margin-top: -3rem;
-                                margin-left: 5rem;
-                                background: $white;
-                                border: 1px solid $primary !important;
-                                border-radius: 5px;
-                                animation-name: growIn;
-                                animation-duration: 200ms;
-                                animation-timing-function: transform cubic-bezier(.18, 1.25, .4, 1), opacity cubic-bezier(0, 1, .4, 1);
-                            }
-                        }
-
-                        >.sidebar-item {
-                            background: transparent;
-                            border-radius: 5px;
-                            position: static;
-
-                            &.active>.sidebar-link,
-                            &>.sidebar-link:hover {
-                                background: rgba($primary, .25);
-                            }
-
-                            &:first-child .sidebar-link {
-                                border-top: 1px solid $gray-500;
-
-                                @include media-breakpoint-up('md') {
-                                    .toggled & {
-                                        border-top: 0 !important;
-                                    }
-                                }
-                            }
-
-                            &.active {
-                                .sidebar-link:first-child {
-                                    border-top: 1px solid $primary;
-
-                                    @include media-breakpoint-up('md') {
-                                        .toggled & {
-                                            border-top: 0 !important;
-                                        }
-                                    }
-                                }
-                            }
-                            
-                            .sidebar-link {
-                                padding: .5rem 1rem;
+                            .icon {
+                                width: 1.25rem;
                                 display: flex;
-                                justify-content: space-between;
-                                color: $dark;
-                                text-decoration: none;
-                                transition: .15s all;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
 
-                                &:active,
-                                &.active,
-                                &:focus,
-                                &.focus {
-                                    background: rgba($primary, 1);
-                                    color: $white;
-                                }
+                        .right svg[data-icon="chevron-right"] {
+                            transition: .3s all;
+                            transform: rotate(0);
+                        }
+                    }
 
-                                .left {
-                                    display: flex;
+                    .sidebar-container {
+                        padding-inline-start: 1.5rem;
 
-                                    .icon {
-                                        padding-right: .5rem;
+                        .nav {
+                            display: flex;
+                            flex-direction: column;
+
+                            .nav-item {
+                                &.active {
+                                    >.nav-link {
+                                        color: $primary;
+
+                                        .right svg[data-icon="chevron-right"] {
+                                            transform: rotate(90deg);
+                                        }
                                     }
                                 }
-                            }
 
-                            .sidebar-container {
-                                list-style: none;
-                                padding-left: 2.25rem !important;
-                                margin: 0;
+                                .nav-link {
+                                    display: flex;
+                                    color: $gray-600;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    transition: .3s all;
+                                    border-radius: 50px;
 
-                                >.sidebar-inner {
-                                    >.sidebar-item {
-                                        >.sidebar-link {
-                                            transition: .15s all;
-                                            text-decoration: none;
-                                            padding: .5rem .25rem;
+                                    // Action Buttons
+                                    &:hover,
+                                    &:active,
+                                    &.active,
+                                    &:focus {
+                                        color: $primary;
+                                    }
+
+                                    // For Inner Items
+                                    .left {
+                                        display: flex;
+
+                                        .icon {
+                                            width: 1.25rem;
                                             display: flex;
-                                            justify-content: space-between;
-                                            flex: 1;
-
-                                            &:hover,
-                                            &:active {
-                                                margin-left: .5rem;
-                                                color: $primary;
-                                            }
+                                            align-items: center;
+                                            justify-content: center;
                                         }
+                                    }
+
+                                    .right svg[data-icon="chevron-right"] {
+                                        transition: .3s all;
+                                        transform: rotate(0);
                                     }
                                 }
                             }

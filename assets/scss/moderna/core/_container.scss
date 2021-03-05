@@ -1,35 +1,29 @@
 .sidebar-fixed {
-    >.wrap-container {
-        margin-left: #{$sidebar-wrapper-width-lg};
+    display: flex;
+    min-height: 100vh;
+
+    .wrap-container {
+        background-color: $white;
+        margin-left: $sidebar-wrapper-width-lg;
         width: calc(100% - #{$sidebar-wrapper-width-lg});
-        min-height: 100vh;
-        background: $white;
-        border-radius: 15px 0 0 15px;
         display: flex;
         flex-direction: column;
-        border-left: 1px solid $gray-300;
+        
+        @include media-breakpoint-down('sm') {
+            width: 100%;
+            margin: 0;
+        }
 
-        @include media-breakpoint-up('md') {
+        @include media-breakpoint-up('sm') {
             .toggled & {
+                width: 100%;
                 margin: 0;
-                width: calc(100% - #{$sidebar-wrapper-width-sm});
             }
         }
-
-        @include media-breakpoint-down('md') {
-            border-left: 1px solid transparent;
-            width: 100%;
-            border-radius: 0;
-            margin-left: 0;
-        }
-
-        #topnav {
-            min-height: 4rem;
-            align-items: center;
-        }
-
+        
         >.content {
-            flex: 1;
+            padding-top: 1rem;
+            flex-grow: 1;
         }
     }
 }

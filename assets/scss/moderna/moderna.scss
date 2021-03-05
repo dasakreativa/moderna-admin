@@ -1,7 +1,7 @@
 // For Admin Variable
 $login-wrapper-width-lg:    30rem;
 $login-wrapper-width-sm:    22rem;
-$sidebar-wrapper-width-lg:  20rem;
+$sidebar-wrapper-width-lg:  21.5rem;
 $sidebar-wrapper-width-sm:  4.375rem;
 
 // Core
@@ -9,14 +9,18 @@ $sidebar-wrapper-width-sm:  4.375rem;
 @import "core/main";
 @import "core/menu";
 @import "core/navbar";
+@import "core/scrollbar";
+@import "core/widgets";
 
 // Pages
 @import "pages/errors";
 @import "pages/login";
 
 // Styling
-@import "styling/animation";
 @import "styling/alerts";
+@import "styling/avatar";
+@import "styling/animation";
+@import "styling/background";
 @import "styling/borders";
 @import "styling/buttons";
 @import "styling/forms";
@@ -25,10 +29,12 @@ $sidebar-wrapper-width-sm:  4.375rem;
 body {
     font-family: 'Rubik', 'Segoe UI', Arial, Helvetica, sans-serif;
     background: $gray-100;
+    color: $gray-700;
 }
 
 ::-webkit-scrollbar {
     width: 12px;
+    height: 12px;
 
     &-track {
         background: $gray-500;
