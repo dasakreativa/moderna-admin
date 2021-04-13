@@ -1,0 +1,27 @@
+// Core Bootstrap File
+@import "./variables";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Elements
+@import "./sidebar/main";
+@import "./sidebar/menu";
+@import "./sidebar/navbar";
+@import "./sidebar/wrapper";
+@import "./sidebar/widgets";
+
+// UI Kits
+@import "./utility/alerts";
+@import "./utility/animation";
+@import "./utility/avatar";
+@import "./utility/dropdown";
+@import "./utility/background";
+@import "./utility/borders";
+@import "./utility/buttons";
+@import "./utility/forms";
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+    font-family: "Rubik", "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}

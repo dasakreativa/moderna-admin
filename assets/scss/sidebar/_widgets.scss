@@ -1,0 +1,15 @@
+.card {
+    &.widget-hero {
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: right;
+
+        @include media-breakpoint-down('md') {
+            background-position: 160% bottom;
+            background-image: none !important;
+        }
+
+        font-size: 1.1rem;
+        line-height: 1.75rem;
+    }
+}

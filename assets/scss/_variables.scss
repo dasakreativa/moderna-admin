@@ -1,0 +1,46 @@
+// Font Variable
+$font-size-base:      .875rem;
+
+// Moderna Admin Sidebar
+$sidebar-lg-width:    20rem;
+
+// Color
+$primary:           #3880ff !default;
+$primary-tint:      #4c8dff !default;
+$secondary:         #92949c !default;
+$secondary-tint:    #9d9fa6 !default;
+$success:           #2dd36f !default;
+$success-tint:      #42d77d !default;
+$info:              #3dc2ff !default;
+$info-tint:         #3dc2ff !default;
+$warning:           #ffc409 !default;
+$warning-tint:      #ffca22 !default;
+$danger:            #eb445a !default;
+$danger-tint:       #ed576b !default;
+$light:             #f4f5f8 !default;
+$light-tint:        #f5f6f9 !default;
+$dark:              #222428 !default;
+$dark-tint:         #383a3e !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "primary":          $primary,
+    "primary-tint":     $primary-tint,
+    "secondary":        $secondary,
+    "secondary-tint":   $secondary-tint,
+    "success":          $success,
+    "success-tint":     $success-tint,
+    "info":             $info,
+    "info-tint":        $info-tint,
+    "warning":          $warning,
+    "warning-tint":     $warning-tint,
+    "danger":           $danger,
+    "danger-tint":      $danger-tint,
+    "dark":             $dark,
+    "dark-tint":        $dark-tint,
+    "light":            $light,
+    "light-tint":       $light-tint,
+  ),
+  $theme-colors
+);

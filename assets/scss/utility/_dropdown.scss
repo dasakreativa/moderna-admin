@@ -1,0 +1,88 @@
+.dropdown {
+
+    .dropdown-menu {
+        .dropdown-item {
+            &:hover,
+            &:focus,
+            &:active {
+                background: lighten($primary, 35%);
+                color: $primary;
+                transition: all .2s;
+            }
+
+            &.active {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+    }
+
+    &.no-caret a:after {
+        content: "";
+        display: none !important;
+    }
+
+    &.dropselect-xs {
+        display: flex;
+        align-items: center;
+
+        .nav-link {
+            border-radius: 5px;
+            border: 1px solid $gray-300;
+            transition: all .1s;
+            color: $gray-700;
+            padding: .25rem .5rem !important;
+            color: $gray-600 !important;
+            font-size: 12px;
+        }
+
+        &.show {
+            .nav-link {
+                border-color: lighten($primary, 15%);
+                background-color: lighten($primary, 35%);
+            }
+        }
+    }
+
+    &.dropselect-sm {
+        display: flex;
+        align-items: center;
+
+        .nav-link {
+            border-radius: 5px;
+            border: 1px solid $gray-300;
+            transition: all .1s;
+            color: $gray-700;
+            padding: .25rem .5rem !important;
+            color: $gray-600 !important;
+        }
+
+        &.show {
+            .nav-link {
+                border-color: lighten($primary, 15%);
+                background-color: lighten($primary, 35%);
+            }
+        }
+    }
+
+    &.dropselect {
+        display: flex;
+        align-items: center;
+
+        .nav-link {
+            border-radius: 5px;
+            border: 1px solid $gray-300;
+            transition: all .1s;
+            color: $gray-700;
+            padding: .5rem .75rem !important;
+            color: $gray-600 !important;
+        }
+
+        &.show {
+            .nav-link {
+                border-color: lighten($primary, 15%);
+                background-color: lighten($primary, 35%);
+            }
+        }
+    }
+}

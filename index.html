@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Moderna Admin</title>
+    <link rel="shortcut icon" href="./assets/images/brands/icon-color.svg" type="image/x-png" />
+
+    <!-- Core Moderna -->
+    <link rel="stylesheet" href="./assets/css/moderna-admin.css" />
+
+    <!-- Addons -->
+    <link rel="stylesheet" href="./assets/addons/fontawesome-free/css/all.min.css" />
+</head>
+<body>
+
+    <div id="app">
+
+        <!-- Top Navigation -->
+        <nav class="navbar navbar-expand fixed-top navbar-light navbar-top bg-white">
+            <button class="navbar-toggler" data-toggle="sidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="#">
+                <img src="./assets/images/brands/logo-color.svg" height="30px" alt="Logo" />
+            </a>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+
+                    <!-- Information Nav Menu -->
+                    <li class="nav-item dropdown nav-item-list">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-comment fa-fw"></i><span class="ml-2 d-none d-md-none d-lg-inline">Informasi</span>
+                        </a>
+                        <div class="dropdown-menu animated--grow-in" aria-labelledby="navbarDropdownMenuLink">
+                            <div class="dropdown-header">
+                                <h6 class="m-0">Semua Notifikasi</h6>
+                                <a href="#">Tandai Telah Dibaca</a>
+                            </div>
+                            <a href="#" class="dropdown-comment active">
+                                <div class="left">
+                                    <avatar class="avatar-xs avatar-success avatar">
+                                        <i class="fas fa-check-circle fa-fw"></i>
+                                    </avatar>
+                                </div>
+                                <div class="right">
+                                    <h6 class="title">Tugas Berhasil Dikirimkan!</h6>
+                                    <p class="description">Tugas anda <strong>Pencak Silat Bab 2</strong> telah berhasil dikumpulkan dan menunggu sistem.</p>
+
+                                    <time datetime="2021-03-21 20:00">Minggu, 21 Maret 2021 pukul 8 malam</time>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-comment active">
+                                <div class="left">
+                                    <avatar class="avatar-xs avatar-danger avatar">
+                                        <i class="fas fa-times-circle fa-fw"></i>
+                                    </avatar>
+                                </div>
+                                <div class="right">
+                                    <h6 class="title">Tugas Gagal Dikirimkan!</h6>
+                                    <p class="description">Tugas anda <strong>Fisika Hukum Kuantum</strong> gagal dikirimkan karena kesalahan peladen.</p>
+
+                                    <time datetime="2021-03-20 20:00">Minggu, 20 Maret 2021 pukul 8 malam</time>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-comment">
+                                <div class="left">
+                                    <avatar class="avatar-xs avatar-warning avatar">
+                                        <i class="fas fa-exclamation-triangle fa-fw"></i>
+                                    </avatar>
+                                </div>
+                                <div class="right">
+                                    <h6 class="title">Tenggat Waktu Tinggal Besok!</h6>
+                                    <p class="description">Tugas anda <strong>Fisika Hukum Kuantum 2</strong> tinggal besok loh! Jangan lupa dikerjakan ya?</p>
+
+                                    <time datetime="2021-03-20 20:00">Minggu, 20 Maret 2021 pukul 8 malam</time>
+                                </div>
+                            </a>
+
+                            <a href="#" class="dropdown-footer">
+                                <span class="mr-2">Lihat Semua</span>
+                                <i class="fas fa-fw fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <!-- End Information Nav Menu -->
+
+                </ul>
+
+                <!-- Right Side Top Menu -->
+                <ul class="navbar-nav ml-auto">
+
+                    <!-- Nav Profile -->
+                    <li class="nav-item dropdown nav-item-profile">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="avatar avatar-xs avatar-primary">AM</span>
+                            <div class="profile-wrapper">
+                                <div class="title">Amir Zuhdi Wibowo</div>
+                                <div class="description">XII MIPA 1</div>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu animated--grow-in dropdown-menu-right" aria-labelledby="dropdownProfile">
+                            <a href="#" class="dropdown-item"><i class="fas fa-fw mr-2 fa-user"></i>Pengguna</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-fw mr-2 fa-cog"></i>Pengaturan</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item bg-hover-danger"><i class="fas fa-fw mr-2 fa-sign-out-alt"></i>Keluar</a>
+                        </div>
+                    </li>
+                    <!-- End Nav Profile -->
+
+                </ul>
+                <!-- End Right Side Top Menu -->
+                
+            </div>
+        </nav>
+        <!-- End Top Navigation -->
+
+        <!-- Sidebar Navigation Wrapper -->
+        <section class="sidebar sidebar-light">
+
+            <!-- Sidebar Brand and Title -->
+            <div class="sidebar-brand">
+                <a href="./index.html">
+                    <img src="./assets/images/brands/logo-color.svg" height="30px" alt="Logo" />
+                </a>
+
+                <button class="sidebar-button" data-toggle="sidebar">
+                    <i class="fas fa-bars fa-fw"></i>
+                </button>
+            </div>
+            <!-- End Sidebar Brand and Title -->
+
+            <!-- Sidebar Body -->
+            <div class="sidebar-body">
+                <ul class="sidebar-menu flex-column" id="main-menu">
+                    <div class="nav-title"><span>Dashboard</span></div>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            <div class="left">
+                                <div class="icon">
+                                    <i class="fas fa-tachometer-alt fa-fw"></i>
+                                </div>
+                                <span class="ml-2">Dasbor</span>
+                            </div>
+                            <div class="right">
+                                <i class="fas fa-chevron-right fa-fw"></i>
+                            </div>
+                        </a>
+                        <ul class="sidebar-container">
+                            <div class="sidebar-inner nav">
+                                <li class="nav-item active">
+                                    <a href="" class="nav-link">
+                                        <div class="left">
+                                            <div class="icon">
+                                                <i class="fas fa-arrow-right fa-fw"></i>
+                                            </div>
+                                            <span class="ml-2">E-Learning</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <div class="left">
+                                            <div class="icon">
+                                                <i class="fas fa-arrow-right fa-fw"></i>
+                                            </div>
+                                            <span class="ml-2">Crypto</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <div class="left">
+                                            <div class="icon">
+                                                <i class="fas fa-arrow-right fa-fw"></i>
+                                            </div>
+                                            <span class="ml-2">Belanja</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <div class="left">
+                                            <div class="icon">
+                                                <i class="fas fa-arrow-right fa-fw"></i>
+                                            </div>
+                                            <span class="ml-2">Menu</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <div class="left">
+                                <div class="icon">
+                                    <i class="fas fa-tachometer-alt fa-fw"></i>
+                                </div>
+                                <span class="ml-2">Dasbor</span>
+                            </div>
+                            <div class="right">
+                                <i class="fas fa-chevron-right fa-fw"></i>
+                            </div>
+                        </a>
+                        <ul class="sidebar-container">
+                            <div class="sidebar-inner nav">
+                                <h3 class="nav-title">Dasbor</h3>
+
+                                <li class="nav-item active">
+                                    <a href="" class="nav-link">
+                                        <div class="left">
+                                            <div class="icon">
+                                                <i class="fas fa-arrow-right fa-fw"></i>
+                                            </div>
+                                            <span class="ml-2">E-Learning</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <div class="left">
+                                            <div class="icon">
+                                                <i class="fas fa-arrow-right fa-fw"></i>
+                                            </div>
+                                            <span class="ml-2">Crypto</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <div class="left">
+                                            <div class="icon">
+                                                <i class="fas fa-arrow-right fa-fw"></i>
+                                            </div>
+                                            <span class="ml-2">Belanja</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <div class="left">
+                                            <div class="icon">
+                                                <i class="fas fa-arrow-right fa-fw"></i>
+                                            </div>
+                                            <span class="ml-2">Menu</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Sidebar Body -->
+            
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <a href="#" class="btn-footer" data-toggle="tooltip" data-placement="top" title="Pengaturan"><i class="fas fa-fw fa-cog"></i></a>
+                <a href="#" class="btn-footer" data-toggle="tooltip" data-placement="top" title="Profil Anda"><i class="fas fa-fw fa-user"></i></a>
+                <a href="#" class="btn-footer" data-toggle="tooltip" data-placement="top" title="Keluar"><i class="fas fa-fw fa-sign-out-alt"></i></a>
+            </div>
+            <!-- End Sidebar Body -->
+
+        </section>
+        <!-- End Sidebar Navigation Wrapper -->
+        
+        <!-- Content Wrapper -->
+        <section class="content-container">
+            <div class="container">
+                
+                <div class="row mt-3">
+                    <div class="col-md-8">
+
+                        <div class="card widget-hero card-body bg-primary-light border-0" style="background-image: url(./assets/images/home-hero-1.svg);">
+                            <div class="row py-4">
+                                <div class="col-md-8">
+                                    <h3 class="h2 text-primary">Selamat Datang Kembali!</h3>
+                                    <p class="m-0">Yuk semangat meraih mimpi dan kejarlah cita-citamu! Jangan lupa ya untuk mengerjakan semua tugas!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Content Wrapper -->
+    </div>
+
+    <!-- Core UI -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery.slim.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Addons -->
+    <script src="./assets/addons/metismenu/dist/metisMenu.min.js"></script>
+
+    <!-- Moderna Core -->
+    <script src="./assets/js/moderna-admin/moderna.js"></script>
+</body>
+</html>

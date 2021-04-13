@@ -1,0 +1,199 @@
+#app {
+    .navbar-top {
+        min-height: 65px;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 14px;
+        border-bottom: 1px solid $gray-300;
+
+        .navbar-brand {
+            @include media-breakpoint-down("md") {
+                display: none;
+            }
+        }
+
+        .navbar-toggler {
+            padding: 0.5rem;
+            border: 0;
+            margin-right: 1rem;
+            display: block;
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.05);
+                transition: all 0.2s;
+            }
+        }
+
+        .navbar-collapse {
+            .navbar-nav {
+                &:not(:last-child) {
+                    margin-right: 0.5rem;
+                }
+
+                // Navbar Item Styling
+                .nav-item:not(.dropselect, .dropselect-sm, .dropselect-xs) {
+                    .nav-link {
+                        height: 65px;
+                        display: flex;
+                        align-items: center;
+                        font-weight: 500;
+                        color: $gray-500;
+                        border-bottom: 2px solid transparent;
+
+                        &.disabled,
+                        &:disabled {
+                            color: $gray-300;
+                            cursor: not-allowed;
+                        }
+
+                        &:hover,
+                        &.hover {
+                            color: $gray-600;
+                        }
+                    }
+
+                    &.active {
+                        .nav-link {
+                            color: $gray-800;
+                            border-bottom: 2px solid $primary;
+                        }
+                    }
+                }
+
+                // Navbar Comment
+                .nav-item-list {
+                    @include media-breakpoint-down("md") {
+                        position: static;
+                    }
+
+                    .nav-link {
+                        &:after {
+                            content: "";
+                            display: none !important;
+                        }
+                    }
+
+                    .dropdown-menu {
+                        padding: 0;
+                        width: 350px;
+                        max-height: 300px;
+                        overflow-y: auto;
+
+                        @include media-breakpoint-down("md") {
+                            width: calc(100% - 2rem);
+                            margin-left: 1rem;
+                            margin-right: 1rem;
+                        }
+
+                        .dropdown-header {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            border-bottom: 1px solid $gray-300;
+                        }
+
+                        // Dropdown List
+                        .dropdown-comment {
+                            display: flex;
+                            padding: 0.5rem 1rem;
+                            color: $gray-600;
+                            text-decoration: none;
+                            transition: all 0.2s;
+
+                            &:hover,
+                            &.hover {
+                                background: lighten($primary, 35%);
+                            }
+
+                            // Row Definition
+                            .left {
+                                width: 20%;
+                            }
+
+                            .right {
+                                width: 80%;
+
+                                .title {
+                                    color: $gray-600;
+                                    font-size: 1rem;
+                                    font-weight: 500;
+                                }
+
+                                .description {
+                                    color: $gray-500;
+                                    margin-bottom: 0.5rem;
+                                }
+
+                                time {
+                                    font-style: italic;
+                                    color: $gray-500;
+                                }
+                            }
+
+                            // Active State
+                            &.active {
+                                background: $primary;
+
+                                .title {
+                                    color: $white;
+                                }
+
+                                .description {
+                                    color: $gray-100;
+                                }
+
+                                time {
+                                    color: $gray-100;
+                                }
+                            }
+                        }
+
+                        // Dropdown Footer
+                        .dropdown-footer {
+                            border-top: 1px solid $gray-300;
+                            display: block;
+                            width: 100%;
+                            text-decoration: none;
+                            color: $gray-600;
+                            padding: 0.5rem 1rem;
+
+                            &:hover {
+                                background: $gray-100;
+                            }
+                        }
+                    }
+                }
+
+                // Navbar Profile Right Side
+                .nav-item-profile {
+                    .nav-link {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        .profile-wrapper {
+                            margin-left: 0.5rem;
+
+                            @include media-breakpoint-down("md") {
+                                display: none !important;
+                            }
+
+                            .title {
+                                color: $gray-600 !important;
+                            }
+
+                            .description {
+                                color: $gray-500 !important;
+                            }
+                        }
+
+                        &:after {
+                            display: none !important;
+                            content: "" !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
